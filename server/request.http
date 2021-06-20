@@ -1,0 +1,50 @@
+
+### register
+POST http://localhost:5000/api/auth/register
+Content-type: application/json
+
+{
+    "username": "nguyendangbang12345",
+    "password": "bang9999"
+}
+### login
+POST http://localhost:5000/api/auth/login
+Content-type: application/json
+
+{
+    "username": "nguyendangbang",
+    "password": "bang9999"
+}
+### create post
+POST http://localhost:5000/api/post/create
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGNlODY4MTVjNWUxNDFhMWIwYTAyODUiLCJpYXQiOjE2MjQxNDc1ODV9.QpuYNl3yKQ3po4NSe0IUZKF9qVFq2TyX45c5XpqVDCE
+
+{
+    "title":"Bai hoc 5",
+      "description":"Day la 1 bai hoc rat hay",
+      "url": "baihoc5.com",
+      "status":"LEARNING",
+      "user": "60ce01e41df50509acfa7e6e"
+}
+
+### read posts
+GET http://localhost:5000/api/post
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGNlMDFlNDFkZjUwNTA5YWNmYTdlNmUiLCJpYXQiOjE2MjQxNTAwNDd9.AkBn3RtgfPvxSkJqxPGf1sxN7C8GZYD4nKqG_lSGV7g
+
+### update post
+PUT http://localhost:5000/api/post/update/60ce86080efc5719cfaa0a84
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGNlMDFlNDFkZjUwNTA5YWNmYTdlNmUiLCJpYXQiOjE2MjQxNTAwNDd9.AkBn3RtgfPvxSkJqxPGf1sxN7C8GZYD4nKqG_lSGV7g
+
+{
+    "title":"vue",
+      "description":"Day la 1 bai hoc rat hay",
+      "url": "vue.org"
+}
+
+### delete post
+DELETE  http://localhost:5000/api/post/delete/60ce86080efc5719cfaa0a84
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGNlMDFlNDFkZjUwNTA5YWNmYTdlNmUiLCJpYXQiOjE2MjQxNTAwNDd9.AkBn3RtgfPvxSkJqxPGf1sxN7C8GZYD4nKqG_lSGV7g
